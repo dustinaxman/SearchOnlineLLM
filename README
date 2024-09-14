@@ -42,7 +42,7 @@ This project is for using an LLM like Claude 3.5 Sonnet to analyze Reddit thread
 Run the script with the following command:
 
 ```
-python script_name.py --search_query "your search query" --num_links_from_search 10 --url_list url1 url2 url3
+python search_reddit.py --search_query "your search query" --num_links_from_search 10 --url_list url1 url2 url3
 ```
 
 Arguments:
