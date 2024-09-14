@@ -1,0 +1,71 @@
+# Reddit LLM Scraper
+
+This project is for using an LLM like Claude 3.5 Sonnet to analyze Reddit threads based on user queries.
+
+## Features
+
+- Google search integration to find relevant Reddit threads
+- Web scraping of Reddit threads and comments
+- Sentiment analysis and ranking of discussed elements
+- Integration with Anthropic's Claude AI for advanced text analysis
+- Caching mechanism for prompts to aid in debugging and reanalysis
+
+## Prerequisites
+
+- Python 3.7+
+- Chrome WebDriver (for Selenium)
+- Anthropic API key
+- Google Search API key and Custom Search Engine ID
+
+## Installation
+
+1. Clone this repository:
+   ```
+   git clone https://github.com/dustinaxman/SearchOnlineLLM.git
+   cd SearchOnlineLLM
+   ```
+
+2. Install the required packages:
+   ```
+   pip install -r requirements.txt
+   ```
+
+3. Set up your environment variables:
+   ```
+   export ANTHROPIC_API_KEY='your_anthropic_api_key'
+   export GOOGLE_SEARCH_CSE_ID='your_google_cse_id'
+   export GOOGLE_SEARCH_API_KEY='your_google_api_key'
+   ```
+
+## Usage
+
+Run the script with the following command:
+
+```
+python script_name.py --search_query "your search query" --num_links_from_search 10 --url_list url1 url2 url3
+```
+
+Arguments:
+- `--search_query`: The search query to use for finding relevant Reddit threads
+- `--num_links_from_search`: Number of Google search results to consider (default is 10)
+- `--url_list`: Optional list of additional specific Reddit URLs to analyze
+
+## Output
+
+The script will output a ranked list of elements discussed in the Reddit threads, scored based on frequency, sentiment, and user engagement.
+
+## Caching
+
+Prompts are automatically cached in your Downloads folder with a timestamp. To use a cached prompt, use the `--cache_prompt` argument followed by the path to the cached prompt file.
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome. 
+
+## License
+
+This project is licensed under the MIT License.
+
+## Disclaimer
+
+This tool is for educational purposes only. Ensure you comply with Reddit's terms of service and API usage guidelines when using this script.
